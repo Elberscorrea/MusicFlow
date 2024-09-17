@@ -36,6 +36,9 @@ Aqui estão algumas capturas de tela da aplicação:
 ### Página de Cadastro
 ![Logout](images/register.png)
 
+### Página de Musica
+![Logout](images/music.png)
+
 
 ### Instalação
 
