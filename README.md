@@ -21,7 +21,7 @@
 
    ```sh
    git clone https://github.com/Elberscorrea/MusicFlow.git
-   cd musicflow
+   cd MusicFlow
    
 2. Crie e ative um ambiente virtual:
 
