@@ -22,6 +22,21 @@ Antes de rodar o projeto, certifique-se de que você tem os seguintes requisitos
 - **JavaScript**: Funcionalidade dinâmica na interface.
 - **API Spotify Scraper**: Fornece acesso aos dados das músicas e artistas. Disponível em [RapidAPI](https://rapidapi.com).
 
+
+# Capturas de Tela 📸
+
+Aqui estão algumas capturas de tela da aplicação:
+
+### Página de Login
+![Login](images/login.png)
+
+### Página Inicial
+![Home](images/home.png)
+
+### Página de Logout
+![Logout](images/logout.png)
+
+
 ### Instalação
 
 1. Clone o repositório:
