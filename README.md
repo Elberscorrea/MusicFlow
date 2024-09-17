@@ -33,8 +33,8 @@ Aqui estão algumas capturas de tela da aplicação:
 ### Página Inicial
 ![Home](images/home.png)
 
-### Página de Logout
-![Logout](images/logout.png)
+### Página de Cadastro
+![Logout](images/register.png)
 
 
 ### Instalação
