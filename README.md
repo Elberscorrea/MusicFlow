@@ -1,12 +1,19 @@
-# MusicFlow
+# MusicFlow 🎵
 
-**MusicFlow** é um projeto inspirado no Spotify que permite pesquisar e explorar faixas de música. Utilizando a API do [Spotify Scraper](https://rapidapi.com), o projeto permite buscar músicas, exibir resultados e gerenciar informações de faixas e artistas.
+MusicFlow é um projeto inspirado no Spotify que oferece uma interface para explorar e gerenciar músicas. Utilizando a API Spotify Scraper, o MusicFlow permite buscar faixas, visualizar detalhes dos artistas e muito mais.
 
-## Funcionalidades
+## Funcionalidades 🚀
 
-- **Busca de Músicas:** Pesquise faixas de música por nome e obtenha resultados com detalhes como nome da faixa, artista, duração e imagem do álbum.
-- **Interface Responsiva:** O design é adaptado para diferentes tamanhos de tela, garantindo uma boa experiência em dispositivos móveis e desktop.
-- **Exibição de Resultados:** Os resultados são exibidos de forma visualmente atraente, com imagens dos álbuns e informações relevantes.
+- **Busca de Músicas**: Encontre suas músicas favoritas usando a API Spotify Scraper.
+- **Visualização de Artistas**: Veja detalhes dos artistas, incluindo imagem, nome e título.
+- **Interface Responsiva**: Design adaptado para diferentes tamanhos de tela.
+
+## Requisitos 🛠️
+
+Antes de rodar o projeto, certifique-se de que você tem os seguintes requisitos:
+
+1. **Python 3.8+**: Certifique-se de ter o Python 3.8 ou superior instalado em sua máquina.
+2. **Pip**: O gerenciador de pacotes do Python deve estar instalado para instalar as dependências.
 
 ## Tecnologias Utilizadas
 
@@ -14,6 +21,21 @@
 - **HTML/CSS**: Estrutura e estilo das páginas web.
 - **JavaScript**: Funcionalidade dinâmica na interface.
 - **API Spotify Scraper**: Fornece acesso aos dados das músicas e artistas. Disponível em [RapidAPI](https://rapidapi.com).
+
+
+# Capturas de Tela 📸
+
+Aqui estão algumas capturas de tela da aplicação:
+
+### Página de Login
+![Login](images/login.png)
+
+### Página Inicial
+![Home](images/home.png)
+
+### Página de Logout
+![Logout](images/logout.png)
+
 
 ### Instalação
 
