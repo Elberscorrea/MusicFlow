@@ -78,10 +78,10 @@ WSGI_APPLICATION = 'MusicFlow.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'musicflow',
-        'USER': 'elber',
-        'PASSWORD': 'elber',
-        'HOST': 'localhost',
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',
         'PORT': 5432
     }
 }
