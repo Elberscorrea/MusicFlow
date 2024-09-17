@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Streaming Service</title>
+    <title>Serviço de streaming de música</title>
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
 </head>
 <body style="margin:0; padding:0; background:#121212; font-family:Arial, sans-serif; color:#fff;">
@@ -36,7 +36,7 @@
             </a>
             <a href="/search" class="sidebar-link">
                 <span class="sidebar-link-icon">🔍</span>
-                Search
+                Pesquisar
             </a>
             <a href="/" class="sidebar-link">
                 <span class="sidebar-link-icon">❤️</span>
@@ -52,76 +52,157 @@
                 {% csrf_token %}
 
                 <div class="search-bar" style="width: 390px;">
-                    <input type="search" name="search_query" placeholder="What do you want to listen to?" aria-label="Search">
+                    <input type="search" name="search_query" placeholder="O que você quer ouvir?" aria-label="Search">
                     <button type="submit" aria-label="Search">
                         🔍
                     </button>
                 </div>
             </form>
-            <div class="search-title">Top Artists</div>
+            <div class="search-title">Top Artistas</div>
         </header>
 
 
         <main style="padding-top:20px;">
             <section style=" margin-top:0px; padding:0px; overflow-x:auto; white-space:nowrap;">
                 <!-- Artist Card -->
-                {% for artist in artists_info %}
                 <div class="artist-card">
-                    <a href="/profile/{{artist.2}}" style="text-decoration: none;">
-                        <img src="{{artist.1}}" alt="{{artist.0}}" style="width:150px; height:150px; border-radius:50%;">
-                        <div class="artist-info">
-                            <div class="artist-name">{{artist.0}}</div>
-                            <div class="artist-title">Artist</div>
-                        </div>
-                    </a>
+                    <img src="https://i.scdn.co/image/ab676161000051747952358e33599027ae3c7f37" alt="Rema" style="width:150px; height:150px; border-radius:50%;">
+                    <div class="artist-info">
+                        <div class="artist-name">Rema</div>
+                        <div class="artist-title">Artista</div>
+                    </div>
                 </div>
-                {% endfor %}
+
+
+                <div class="artist-card">
+                    <img src="https://www.billboard.com/wp-content/uploads/media/taylor-swift-press-wim-2019-cr-Valheria-Roche-billboard-1548.jpg?w=942&h=623&crop=1" alt="Rema" style="width:150px; height:150px; border-radius:50%;">
+                    <div class="artist-info">
+                        <div class="artist-name">Taylor Swift</div>
+                        <div class="artist-title">Artista</div>
+                    </div>
+                </div>
+
+
+                <div class="artist-card">
+                    <img src="https://www.stereofox.com/wp-content/uploads/2016/05/the-weeknd-artist-profile.jpg" alt="Rema" style="width:150px; height:150px; border-radius:50%;">
+                    <div class="artist-info">
+                        <div class="artist-name">The Weeknd</div>
+                        <div class="artist-title">Artista</div>
+                    </div>
+                </div>
+
+
+                <div class="artist-card">
+                    <img src="https://cdn.britannica.com/59/204159-050-5055F2A9/Beyonce-2013.jpg" alt="Rema" style="width:150px; height:150px; border-radius:50%;">
+                    <div class="artist-info">
+                        <div class="artist-name">Beyonce</div>
+                        <div class="artist-title">Artista</div>
+                    </div>
+                </div>
+
+
+                <div class="artist-card">
+                    <img src="https://s.yimg.com/ny/api/res/1.2/3.USUCkiITgYHDvFwCezAQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQ2MQ--/https://media.zenfs.com/en/purewow_185/2c9db531e09a5d105576508b12f466f7" alt="Rema" style="width:150px; height:150px; border-radius:50%;">
+                    <div class="artist-info">
+                        <div class="artist-name">Rihanna</div>
+                        <div class="artist-title">Artista</div>
+                    </div>
+                </div>
+
+
+
+
+                <!-- Add more content cards here -->
             </section>
             <!-- Repeat sections for other categories with more content cards -->
-          
+
           <!-- "Browse All" Section Title -->
-          <div class="browse-all-title">Top Songs</div>
+          <div class="browse-all-title">Navegar por tudo</div>
 
           <!-- "Browse All" Section Content -->
-          
 
-        <div class="browse-all">
+
+          <div class="browse-all">
             <!-- Category Card -->
-
-            {% for track in first_six_tracks %}
             <div class="category-card">
-                <a style="text-decoration: none; color: white;" href="/music/{{track.id}}">
-                    <img src="{{track.cover_url}}" alt="{{track.name}}">
-                    <div class="category-title">{{track.name}}</div>
-                </a>
+                <img src="https://i.scdn.co/image/ab6765630000ba8a81f07e1ead0317ee3c285bfa" alt="Podcasts">
+                <div class="category-title">Podcasts</div>
             </div>
-            {% endfor %}
+
+            <div class="category-card">
+              <img src="https://i.scdn.co/image/ab67fb8200005cafa6152f62518b4c3251858b21" alt="Podcasts">
+              <div class="category-title">Audiobooks</div>
+            </div>
+
+            <div class="category-card">
+              <img src="https://concerts.spotifycdn.com/images/live-events_category-image.jpg" alt="Podcasts">
+              <div class="category-title">Live Events</div>
+            </div>
+
+            <div class="category-card">
+              <img src="https://t.scdn.co/images/ea364e99656e46a096ea1df50f581efe" alt="Podcasts">
+              <div class="category-title">Made For You</div>
+            </div>
+
+
+            <!-- Repeat for each category -->
+            <!-- ... other categories ... -->
         </div>
 
         <div class="browse-all">
             <!-- Category Card -->
-            {% for track in second_six_tracks %}
             <div class="category-card">
-                <a style="text-decoration: none; color: white;" href="/music/{{track.id}}">
-                    <img src="{{track.cover_url}}" alt="{{track.name}}">
-                    <div class="category-title">{{track.name}}</div>
-                </a>
+                <img src="https://i.scdn.co/image/ab67fb8200008e2cea38d17f2e1a1630287f4328" alt="Podcasts">
+                <div class="category-title">2023 in podcasts</div>
             </div>
-            {% endfor %}
+
+            <div class="category-card">
+              <img src="https://i.scdn.co/image/ab6761700000c52c87ab6b4a0c51593853fe2157" alt="Podcasts">
+              <div class="category-title">Merch</div>
+            </div>
+
+            <div class="category-card">
+              <img src="https://i.scdn.co/image/ab67fb8200008e2c64adf130003faa51378e3d2b" alt="Podcasts">
+              <div class="category-title">Happy Christmas</div>
+            </div>
+
+            <div class="category-card">
+              <img src="https://i.scdn.co/image/ab67fb8200005cafa862ab80dd85682b37c4e768" alt="Podcasts">
+              <div class="category-title">Pop</div>
+            </div>
+
+
+            <!-- Repeat for each category -->
+            <!-- ... other categories ... -->
         </div>
 
         <div class="browse-all">
             <!-- Category Card -->
-            {% for track in third_six_tracks %}
             <div class="category-card">
-                <a style="text-decoration: none; color: white;" href="/music/{{track.id}}">
-                    <img src="{{track.cover_url}}" alt="{{track.name}}">
-                    <div class="category-title">{{track.name}}</div>
-                </a>
+                <img src="https://t.scdn.co/images/7262179db37c498480ef06bfacb60310.jpeg" alt="Podcasts">
+                <div class="category-title">Podcast Charts</div>
             </div>
-            {% endfor %}
-        </div>
 
+            <div class="category-card">
+              <img src="https://t.scdn.co/images/209c867f5bb34076b0dcc9deeb1868e6" alt="Podcasts">
+              <div class="category-title">Podcast New Releases</div>
+            </div>
+
+            <div class="category-card">
+              <img src="https://i.scdn.co/image/9af79fd06e34dea3cd27c4e1cd6ec7343ce20af4" alt="Podcasts">
+              <div class="category-title">Video Podcasts</div>
+            </div>
+
+            <div class="category-card">
+              <img src="https://i.scdn.co/image/ab67fb8200005caf3a75eafe6ba383e4152e6938" alt="Podcasts">
+              <div class="category-title">Fiction & Literature</div>
+            </div>
+
+
+
+            <!-- Repeat for each category -->
+            <!-- ... other categories ... -->
+        </div>
 
         </main>
 

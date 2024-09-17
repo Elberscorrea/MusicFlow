@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Artist Profile</title>
+  <title>Perfil do Artista</title>
   <link rel="stylesheet" type="text/css" href="{% static 'search-style.css' %}" />
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.4/dist/tailwind.min.css" rel="stylesheet">
   <style>
@@ -49,7 +49,7 @@
         </a>
         <a href="/search" class="sidebar-link">
             <span class="sidebar-link-icon">🔍</span>
-            Search
+            Pesquisar
         </a>
     </div>
 
@@ -68,7 +68,7 @@
             {% csrf_token %}
 
             <div class="search-bar" style="width: 390px;">
-                <input type="search" name="search_query" placeholder="What do you want to listen to?" aria-label="Search">
+                <input type="search" name="search_query" placeholder="O que você quer ouvir?" aria-label="Search">
                 <button type="submit" aria-label="Search">
                     🔍
                 </button>
@@ -79,7 +79,7 @@
     <!-- Popular Tracks Section -->
     <div class="p-5">
       <br>
-      <h2 class="text-2xl font-bold mb-4">Search Results ({{search_results_count}} results)</h2>
+      <h2 class="text-2xl font-bold mb-4">Resultado da pesquisa ({{search_results_count}} results)</h2>
       <div class="divide-y divide-gray-800">
         <!-- Single Track Row -->
         {% for track in track_list %}

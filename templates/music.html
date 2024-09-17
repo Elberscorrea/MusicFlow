@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Streaming Service</title>
+    <title>Serviço de streaming de música</title>
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
 </head>
 <body style="margin:0; padding:0; background:#121212; font-family:Arial, sans-serif; color:#fff;">
@@ -37,7 +37,7 @@
             </a>
             <a href="/search" class="sidebar-link">
                 <span class="sidebar-link-icon">🔍</span>
-                Search
+                Pesquisar
             </a>
         </div>
 
@@ -93,7 +93,7 @@
             const progressPercentage = (audioPlayer.currentTime / audioPlayer.duration) * 100;
             progress.style.width = `${progressPercentage}%`;
 
-            // Update current time text
+
             const currentMinutes = Math.floor(audioPlayer.currentTime / 60);
             const currentSeconds = Math.floor(audioPlayer.currentTime - currentMinutes * 60);
             currentTimeElement.textContent = `${currentMinutes}:${currentSeconds.toString().padStart(2, '0')}`;
@@ -107,13 +107,13 @@
             audioPlayer.currentTime = (clickX / progressBarWidth) * duration;
         });
 
-        // Move forward 10 seconds
+
         document.getElementById('next').addEventListener('click', () => {
             audioPlayer.currentTime = Math.min(audioPlayer.duration, audioPlayer.currentTime + 10);
         });
 
 
-        // Move back 10 seconds
+
         document.getElementById('prev').addEventListener('click', () => {
             audioPlayer.currentTime = Math.max(0, audioPlayer.currentTime - 10);
         });
@@ -125,19 +125,17 @@
             isFavorited = !isFavorited;
 
             if (isFavorited) {
-                // Marcar como favorito (mudando o ícone para uma estrela cheia)
+
                 favoriteBtn.innerHTML = '&#9733;'; // Estrela cheia
                 favoriteBtn.style.color = '#FFD700'; // Dourado
-                // Lógica para adicionar a música aos favoritos (backend)
 
-                // Aqui você pode fazer uma chamada AJAX para salvar essa música no banco de dados como favorita
+
+
             } else {
-                // Desmarcar como favorito (mudando o ícone para uma estrela vazia)
+
                 favoriteBtn.innerHTML = '&#9734;'; // Estrela vazia
                 favoriteBtn.style.color = '#fff'; // Branco
-                // Lógica para remover dos favoritos (backend)
 
-                // Chamada para remover a música dos favoritos
             }
         });
     </script>
